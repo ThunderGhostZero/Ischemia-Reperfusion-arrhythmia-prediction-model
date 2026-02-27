@@ -107,7 +107,8 @@ lime_exp = lime_explainer.explain_instance(
 )
 
 #显示LIME解释（HTML格式）
-lime_html = lime_exp.as.html(show_table=True)
+lime_html = lime_exp.as_html(show_table=True)
 st.components.v1.html(lime_html, height=600, scrolling=True)
+
 
 
