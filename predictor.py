@@ -45,7 +45,7 @@ TIT = st.selectbox(
 
 # 3. IRA (1: LAD, 2: LCX, 3: RCA, 4: LM)
 IRA = st.selectbox(
-    "What is the culprit of artery responsible for AMI?"
+    "What is the culprit of artery responsible for AMI?",
     options=[1, 2, 3, 4],
     format_func=lambda x: {
         1: "LAD",
@@ -57,7 +57,7 @@ IRA = st.selectbox(
 
 # 4. TIMI (1: 70-99%狭窄，2：100%狭窄)
 TIMI = st.selectbox(
-    "What is the TIMI flow grade?"
+    "What is the TIMI flow grade?",
     options=[1, 2],
     format_func=lambda x: "70-99%" if x == 1 else "100%"
 )
@@ -109,4 +109,5 @@ lime_exp = lime_explainer.explain_instance(
 #显示LIME解释（HTML格式）
 lime_html = lime_exp.as.html(show_table=True)
 st.components.v1.html(lime_html, height=600, scrolling=True)
+
 
