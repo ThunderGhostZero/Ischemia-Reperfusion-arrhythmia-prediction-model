@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 
 # =================================基础配置==================================
 #加载训练好的XGBoost模型（确保XGBoost.pkl与脚本同目录）
-model = joblib. load('XGBoost.pkl')
+model = joblib.load('XGBoost.pkl')
 
 #加载测试数据（用于LIME解释器，确保X_test.csv与脚本同目录）
 X_test = pd.read_csv('X_test.csv')
@@ -109,6 +109,7 @@ lime_exp = lime_explainer.explain_instance(
 #显示LIME解释（HTML格式）
 lime_html = lime_exp.as_html(show_table=True)
 st.components.v1.html(lime_html, height=600, scrolling=True)
+
 
 
 
