@@ -23,8 +23,8 @@ feature_names = [
 ]
 
 # ==========================Streamlit页面配置============================
-st.set_page_config(page_title="I/Ra risk prediction calcular", layout="wide")
-st.title("I/Ra risk prediction calcular")
+st.set_page_config(page_title="I/Ra risk prediction calculator", layout="wide")
+st.title("I/Ra risk prediction calculator")
 st.markdown("Please fill out the following blank to get the result")
 
 # ====================================特征输入组间（按编码规则设计）=======================================
@@ -109,6 +109,7 @@ lime_exp = lime_explainer.explain_instance(
 #显示LIME解释（HTML格式）
 lime_html = lime_exp.as_html(show_table=True)
 st.components.v1.html(lime_html, height=600, scrolling=True)
+
 
 
 
